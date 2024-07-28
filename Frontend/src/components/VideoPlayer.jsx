@@ -71,7 +71,7 @@ const VideoPlayer = ({ episode, podcast, currenttime, index }) => {
             onClick={() => dispatch(closePlayer())}
           />
           <video
-            className="h-full max-h-96 w-full object-cover rounded-lg mx-4 mt-8"
+            className="h-full max-h-96 w-full object-cover rounded-xl px-8 mt-10"
             controls
             ref={videoref}
             onTimeUpdate={handleTimeUpdate}

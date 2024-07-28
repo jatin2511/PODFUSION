@@ -15,7 +15,6 @@ const SearchedCard = ({ podcast }) => {
         'p-4',
         'rounded-lg',
         'gap-3',
-        'bg-white',
         'shadow-md',
         'hover:shadow-lg',
         'transition-transform',
