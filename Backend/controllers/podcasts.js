@@ -8,10 +8,11 @@ import User from "../models/User.js";
 export const createPodcast = async (req, res, next) => {
     try {
         const user = await User.findById(req.user.id);
-
+    console.log(user)
+    console.log(req.body)
         let episodeList = []
         await Promise.all(req.body.episodes.map(async (item) => {
-
+       
             const episode = new Episodes(
                 { creator: user.id, ...item }
             );

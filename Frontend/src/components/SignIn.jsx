@@ -86,8 +86,14 @@ const SignIn = ({ signInOpen, setSignInOpen, setSignUpOpen }) => {
       try {
         const res = await signIn({ email, password });
         if (res.status === 200) {
+          const { token, user }=res.data;
+          localStorage.setItem('auth-token',token);
+         console.log(user);
+           dispatch(loginSuccess({ user: user, token: token }));
+          setIsLoggedin(true);
           dispatch(openSnackbar({ message: "Logged In Successfully", severity: "success" }));
           setSignInOpen(false); 
+          
         } else {
           setCredentialError(res.data.message);
           dispatch(openSnackbar({ message: res.data.message, severity: "error" }));

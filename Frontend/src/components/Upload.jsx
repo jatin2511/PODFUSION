@@ -109,7 +109,7 @@ const Upload = ({ setUploadOpen }) => {
         );
     };
 
-    const createPodcast = async () => {
+    const CreatePodcast = async () => {
         setLoading(true);
         try {
             const res = await createPodcast(podcast, token);
@@ -320,7 +320,7 @@ const Upload = ({ setUploadOpen }) => {
                                 </button>
                                 <button
                                     className={`w-full bg-green-500 hover:bg-green-600 text-white font-medium py-2 px-4 rounded-lg transition duration-300 ${createDisabled || loading ? 'opacity-50 cursor-not-allowed' : ''}`}
-                                    onClick={createPodcast}
+                                    onClick={CreatePodcast}
                                     disabled={createDisabled || loading}
                                 >
                                     {loading ? (

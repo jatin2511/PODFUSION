@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const API = axios.create({
-  baseURL: 'https://podfusion.onrender.com/api',
+  baseURL: 'https://podfusion.onrender.com',
   withCredentials: true,
 });
 
